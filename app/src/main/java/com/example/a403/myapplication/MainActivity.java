@@ -49,13 +49,9 @@ public class MainActivity extends AppCompatActivity {
         ch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-                    Toast.makeText(getApplicationContext(), "눌림", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "안눌림", Toast.LENGTH_SHORT).show();
-                }
+                String str = "눌림";
+                if(!isChecked) str = "안눌림";
+                Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
             }
         });
     }
