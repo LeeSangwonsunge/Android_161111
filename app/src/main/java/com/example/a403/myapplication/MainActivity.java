@@ -1,5 +1,6 @@
 package com.example.a403.myapplication;
 
+import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 t1.setText("이상원");
+            }
+        });
+        t1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "존잘", Toast.LENGTH_SHORT).show();
             }
         });
     }
