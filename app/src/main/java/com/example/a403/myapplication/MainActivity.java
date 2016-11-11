@@ -8,15 +8,16 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView t1;
-    Button b1;
-    Button b2;
+    Button b1, b2;
     CalendarView c1;
     CheckBox ch1;
+    RadioButton r1, r2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         c1 = (CalendarView)findViewById(R.id.calendarView);
         ch1 = (CheckBox)findViewById(R.id.checkBox);
         b1 = (Button)findViewById(R.id.button);
+        r1 = (RadioButton)findViewById(R.id.radioButton);
+        r2 = (RadioButton)findViewById(R.id.radioButton2);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +55,18 @@ public class MainActivity extends AppCompatActivity {
                 String str = "눌림";
                 if(!isChecked) str = "안눌림";
                 Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+            }
+        });
+        r1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "피자", Toast.LENGTH_SHORT).show();
+            }
+        });
+        r2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "스파게티", Toast.LENGTH_SHORT).show();
             }
         });
     }
